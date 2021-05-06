@@ -1,8 +1,7 @@
-import * as functions from "firebase-functions";
+const app = require("express")();
 const nodeHtmlToImage = require("node-html-to-image");
 
-// func
-export const generateThumbnail = functions.https.onRequest(async (req, res) => {
+app.get("/", async (req, res) => {
   const { title, time, username, userPhoto } = req.query;
 
   const image = await nodeHtmlToImage({
@@ -81,4 +80,9 @@ export const generateThumbnail = functions.https.onRequest(async (req, res) => {
   });
   res.writeHead(200, { "Content-Type": "image/png" });
   res.end(image, "binary");
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log(`Thumbnail Generator: localhost:${port}`);
 });

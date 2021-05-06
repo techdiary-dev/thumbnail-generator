@@ -1,0 +1,24 @@
+{
+  "name": "thumbnail-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techdiary-dev/thumbnail-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techdiary-dev/thumbnail-generator/issues"
+  },
+  "homepage": "https://github.com/techdiary-dev/thumbnail-generator#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-html-to-image": "^3.1.0"
+  }
+}
